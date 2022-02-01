@@ -1,0 +1,11 @@
+.card1:hover .nameDesignation1,
+.card2:hover .nameDesignation2,
+.card3:hover .nameDesignation3,
+.card4:hover .nameDesignation4,
+.card5:hover .nameDesignation5,
+.card6:hover .nameDesignation6,
+.card7:hover .nameDesignation7,
+.card8:hover .nameDesignation8,
+.card9:hover .nameDesignation9{
+    visibility: visible;
+}

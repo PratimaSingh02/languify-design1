@@ -1,0 +1,38 @@
+.homepage1-container{
+    position: relative;
+    margin-top: 112px;
+}
+
+.tryBtn{
+    width:160px;
+    height:60px;
+    border:none;
+    border-radius:60px;
+    background-color:#02569D;
+    text-transform:capitalize;
+    cursor: pointer;
+    color:#ffffff;
+    font-family:'Open Sans';
+    font-size:18px;
+  }
+  
+  .tryBtn:hover{
+    background-color: #7EB4D9;
+  }
+
+
+@media screen and (max-width:1071px) {
+    .tryBtn{
+      width:140px;
+      height:50px;
+      font-size:15px;
+    }
+}
+
+@media screen and (max-width:685px) {
+    .tryBtn{
+        width:120px;
+        height:40px;
+        font-size:12px;
+      }
+}

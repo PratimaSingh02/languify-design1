@@ -1,0 +1,29 @@
+.hr1{
+    margin-bottom: 7em;
+}
+  
+.hr2{
+    margin-top: 14em;
+    margin-bottom: 4em;
+}
+
+@media screen and (max-width:1071px) {
+    .hr2{
+        margin-top:7em;
+        margin-bottom: 2em;
+      }
+}
+
+@media screen and (max-width:685px) {
+.hr2{
+    margin-top:5em;
+    margin-bottom: 2em;
+  }
+}
+
+@media screen and (max-width:576px) {
+.hr1,.hr2{
+    margin-top:5em;
+    margin-bottom: 2em;
+  }
+}

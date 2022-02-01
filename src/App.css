@@ -1,38 +1,236 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400&display=swap');
+
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.container{
+  position: relative;
+  width:80%;
+  min-height:600px;
+  display:flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin:auto;
+  /* border:1px solid blue; */
 }
 
-.App-link {
-  color: #61dafb;
+hr{
+  width:50%;
+  height:2px;
+  background-color:#C7CBCD;
+  border: 0;
+  /* border: 2px solid #C7CBCD; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sphere{
+  position: absolute;
+  z-index:-1;
+  cursor: pointer;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.sphere1{
+  width: 144px;
+  height:144px;
+  top:100px;
+  left:5px;
+  animation: floating1 20s infinite;
+}
+
+.sphere2{
+  width: 144px;
+  height:144px;
+  top:90px;
+  right:20px;
+  animation: floating2 20s infinite;
+}
+
+.sphere3{
+  width: 100px;
+  height:100px;
+  top:20px;
+  right:300px;
+  animation: floating3 20s infinite;
+}
+
+.sphere4{
+  width: 100px;
+  height:100px;
+  left:150px;
+  bottom:5px;
+  animation: floating4 20s infinite;
+}
+
+.sphere5{
+  width: 100px;
+  height:100px;
+  top:500px;
+  left:6px;
+  animation: floating1 20s infinite;
+}
+
+.sphere6{
+  width: 97px;
+  height:97px;
+  top:300px;
+  right:50px;
+  animation: floating6 20s infinite;
+}
+
+.sphere7{
+  width: 70px;
+  height:70px;
+  top:50px;
+  right:30px;
+  animation: floating3 20s infinite;
+}
+
+.sphere8{
+  width: 100px;
+  height:100px;
+  top:0;
+  right:5px;
+  animation: floating3 20s infinite;
+}
+
+.sphere9{
+  width: 134px;
+  height:134px;
+  bottom:10px;
+  left:20px;
+  animation: floating9 20s infinite;
+}
+
+/* about us page spheres */
+.sphere10{
+  width: 100px;
+  height:100px;
+  top:700px;
+  left:50px;
+  animation: floating1 20s infinite;
+}
+
+.sphere11{
+  width: 100px;
+  height:100px;
+  top:1200px;
+  right:50px;
+  animation: floating6 20s infinite;
+}
+
+.sphere12{
+  width: 100px;
+  height:100px;
+  top:1700px;
+  left:10px;
+  animation: floating1 20s infinite;
+}
+
+@keyframes floating1 {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, -200px); }
+  100%   { transform: translate(0, -0px); }   
+}
+
+@keyframes floating2 {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 150px); }
+  100%   { transform: translate(0, -0px); }   
+}
+
+@keyframes floating4 {
+  0% { transform: translate(0px,  0px); }
+  50%  { transform: translate(100px, 100px); }
+  100%   { transform: translate(-0px, -0px); } 
+}
+
+@keyframes floating3 {
+from {
+  transform: rotate(0deg)
+             translate(30px)
+             rotate(0deg);
+}
+to {
+  transform: rotate(360deg)
+             translate(30px) 
+             rotate(-360deg);
+}
+}
+
+@keyframes floating6 {
+  0% { transform: translate(0,  0); }
+  50%  { transform: translate(-100px, 0); }
+  100%   { transform: translate(-0px,0); } 
+}
+
+@keyframes floating9 {
+  0% { transform: translate(0,  0); }
+  50%  { transform: translate(100px, 0); }
+  100%   { transform: translate(-0px,0); } 
+}
+
+
+@media screen and (max-width:1071px) {
+  .sphere1{
+    width:52px;
+    height:52px;
   }
-  to {
-    transform: rotate(360deg);
+  .sphere2{
+    width:52px;
+    height:53px;
+    right:10px;
+  }
+  .sphere3{
+    top:10px;
+    right:60px;
+    width:36px;
+    height:36px;
+  }
+  .sphere4{
+  width: 52px;
+  height:52px;
+  left:50px;
+  }
+  .sphere5,.sphere6,.sphere8,.sphere9,.sphere10,.sphere11,.sphere12{
+  width: 52px;
+  height:52px;
+  }
+  .sphere7{
+    width: 40px;
+    height:40px;
+  }
+  .sphere11{
+    top:1000px;
+    right:50px;
+  }
+}
+
+@media screen and (max-width:685px) {
+  .container{
+    min-height:450px;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .container{
+    min-height:410px;
+  }
+  .sphere5,.sphere6,.sphere7,.sphere8,.sphere9,.sphere11{
+    display: none;
+  }
+  .sphere10{
+    top:1000px;
+    left:10px;
+    animation: floating1 20s infinite;
+  }
+  .sphere12{
+    top:1600px;
+    left:100px;
+    animation: floating9 20s infinite;
   }
 }
