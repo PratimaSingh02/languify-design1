@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 import Footer from './components/Footer';
 import TeamPage from './pages/TeamPage';
 import Partners from './pages/Partners'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 
 function App() {
   return (
