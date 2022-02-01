@@ -19,9 +19,9 @@ export default function Footer() {
         <Box className={classes.section2}>
             <ul className='footer-list'>
                 <Link to='/about' className='link'><li>About us</li></Link>
-                <Link to='/partners' className='link'><li>Products</li></Link>
+                <li>Products</li>
                 <li>Careers</li>
-                <li>Partners</li>
+                <Link to='/partners' className='link'><li>Partners</li></Link>
             </ul>
         </Box>
       </div>
