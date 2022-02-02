@@ -68,12 +68,15 @@ const useStyles=makeStyles(theme=>({
         overflow:'hidden',
         [theme.breakpoints.down(1071)]: {
             width:600,
+            height:45,      
         },
         [theme.breakpoints.down(686)]: {
             width:520,
+            height:35,
         },
         [theme.breakpoints.down(577)]: {
-            width:280
+            width:280,
+            height:30
         },
     },
     startProgress:{
@@ -85,14 +88,17 @@ const useStyles=makeStyles(theme=>({
         backgroundColor:'#F2FAFF',
         [theme.breakpoints.down(1071)]: {
             width:600,
+            height:45,
             left:10
         },
         [theme.breakpoints.down(686)]: {
             width:520,
+            height:35,
             left:10
         },
         [theme.breakpoints.down(577)]: {
             width:280,
+            height:30,
             left:0
         },
     },
@@ -104,8 +110,16 @@ const useStyles=makeStyles(theme=>({
         height:60,
         backgroundColor:'#02569D',
         borderRadius:184,
-        // display:'none',
         transition:'width 2s',
+        [theme.breakpoints.down(1071)]: {
+            height:45,
+        },
+        [theme.breakpoints.down(686)]: {
+            height:35
+        },
+        [theme.breakpoints.down(577)]: {
+            height:30
+        },
     },
     analyseProgress:{
         position:'absolute',
@@ -117,14 +131,17 @@ const useStyles=makeStyles(theme=>({
         display:'none',
         [theme.breakpoints.down(1071)]: {
             width:600,
+            height:45,
             left:10
         },
         [theme.breakpoints.down(686)]: {
             width:520,
+            height:35,
             left:10
         },
         [theme.breakpoints.down(577)]: {
             width:280,
+            height:30,
             left:0
         },
     },
