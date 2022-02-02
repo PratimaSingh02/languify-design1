@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/languify-design1/static/css/main.cb5c69ba.css",
-    "main.js": "/languify-design1/static/js/main.ac789a26.js",
+    "main.css": "/languify-design1/static/css/main.6984e4f7.css",
+    "main.js": "/languify-design1/static/js/main.0530d4d2.js",
     "static/media/sphere.svg": "/languify-design1/static/media/sphere.4dfac19698958ec88ce07932faa439c6.svg",
     "static/media/member2.svg": "/languify-design1/static/media/member2.b67500c75eb8b579d60068f737619e5d.svg",
     "static/media/mentor4.svg": "/languify-design1/static/media/mentor4.8057a42e0d9be58c1d0b2b3f136b8524.svg",
@@ -33,16 +33,19 @@
     "static/media/Logo.svg": "/languify-design1/static/media/Logo.d99e9828c0301f9dc1d2935bbba9efc1.svg",
     "static/media/partner4.svg": "/languify-design1/static/media/partner4.2ec56f5adf2ad56085b1b191db19e221.svg",
     "static/media/support4.svg": "/languify-design1/static/media/support4.8a539ff49bac24343a1329ea17f74f68.svg",
+    "static/media/ListenButton.svg": "/languify-design1/static/media/ListenButton.758e223bf22044131a60f669376c1b7e.svg",
+    "static/media/exclamation.svg": "/languify-design1/static/media/exclamation.fda81824805dc950327c1f44f384ed51.svg",
     "static/media/mobileLogo.svg": "/languify-design1/static/media/mobileLogo.e062ed05097c75b634ded6e2b099dabf.svg",
     "index.html": "/languify-design1/index.html",
+    "static/media/analysed.svg": "/languify-design1/static/media/analysed.2d5b627d4391e52095fb96a6acac2188.svg",
     "static/media/hamburger.svg": "/languify-design1/static/media/hamburger.e8a03cb80fd84fb165d8bb18067fe7c0.svg",
     "static/media/dropdown.svg": "/languify-design1/static/media/dropdown.a8acabcbe6f0ecd9d62ac94d3ce34035.svg",
     "static/media/cancel.svg": "/languify-design1/static/media/cancel.c9179fdfad1d963a0a6ed829557e0ca2.svg",
-    "main.cb5c69ba.css.map": "/languify-design1/static/css/main.cb5c69ba.css.map",
-    "main.ac789a26.js.map": "/languify-design1/static/js/main.ac789a26.js.map"
+    "main.6984e4f7.css.map": "/languify-design1/static/css/main.6984e4f7.css.map",
+    "main.0530d4d2.js.map": "/languify-design1/static/js/main.0530d4d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb5c69ba.css",
-    "static/js/main.ac789a26.js"
+    "static/css/main.6984e4f7.css",
+    "static/js/main.0530d4d2.js"
   ]
 }
