@@ -176,6 +176,9 @@ to {
 
 
 @media screen and (max-width:1071px) {
+  .container{
+    width:90%;
+  }
   .sphere1{
     width:52px;
     height:52px;
@@ -213,6 +216,7 @@ to {
 @media screen and (max-width:685px) {
   .container{
     min-height:450px;
+    width:95%;
   }
 }
 

@@ -18,10 +18,10 @@ const useStyles=makeStyles(theme=>({
       [theme.breakpoints.down(1071)]: {
         fontSize:45
       },
-      [theme.breakpoints.down(685)]: {
+      [theme.breakpoints.down(686)]: {
         fontSize:38
       },
-      [theme.breakpoints.down(576)]: {
+      [theme.breakpoints.down(577)]: {
         fontSize:36
       },
     },
@@ -33,10 +33,10 @@ const useStyles=makeStyles(theme=>({
       [theme.breakpoints.down(1071)]: {
         fontSize:26
       },
-      [theme.breakpoints.down(685)]: {
+      [theme.breakpoints.down(686)]: {
         fontSize:20
       },
-      [theme.breakpoints.down(576)]: {
+      [theme.breakpoints.down(577)]: {
         fontSize:15,
         marginBottom:'4em'
       },

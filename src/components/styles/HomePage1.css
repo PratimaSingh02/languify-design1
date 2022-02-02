@@ -1,7 +1,9 @@
 .homepage1-container{
     position: relative;
     margin-top: 112px;
-}
+    width:100%;
+    /* border:1px solid red; */
+    }
 
 .tryBtn{
     width:160px;
