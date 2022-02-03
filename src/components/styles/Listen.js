@@ -77,7 +77,7 @@ const useStyles=makeStyles(theme=>({
         [theme.breakpoints.down(577)]: {
             width:280,
             height:30
-        },
+        }
     },
     startProgress:{
         position:'absolute',
@@ -399,7 +399,7 @@ const useStyles=makeStyles(theme=>({
     },
     
     demoPara:{
-        width:716,
+        width:796,
         // display:'flex',
         // flexDirection:'column',
         // alignItems:'flex-start',

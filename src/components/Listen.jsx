@@ -13,6 +13,7 @@ export default function Listen() {
 
     const progressAnimate=()=>{
         if(startProgress===true){
+            let progressDiv=document.querySelector('.progress')
             let elem = document.querySelector(".startProgress");
             let progress=document.querySelector('.progressFill')
             let analyse=document.querySelector('.analyseProgress')
@@ -20,10 +21,11 @@ export default function Listen() {
             let analysingText = document.querySelector(".analysingText");
             let seconds=document.querySelector(".seconds");
             let analysedImg=document.querySelector(".analysedImg");
+            let feedbackDiv=document.querySelector('.feedbackDiv')
             elem.style.width=60
             data.innerHTML="Start speaking in 5"
             data.style.visibility='visible'
-            // progress.style.display='none'
+            progressDiv.style.marginTop=0
             progress.style.width=0
             seconds.style.display='none'
             analysingText.innerHTML='Analysing'
@@ -44,12 +46,23 @@ export default function Listen() {
                 
                 let counter=4;
                 let counterInterval= setInterval(()=>{
-                    data.innerHTML=`Start speaking in ${counter}`
-                    if(--counter===0)
-                        clearInterval(counterInterval)
+                    if(!document.hidden){
+                        data.innerHTML=`Start speaking in ${counter}`
+                        if(--counter===0)
+                            clearInterval(counterInterval)
+                    }
                 },1000)
 
-                
+                function startSecInterval(){
+                    let secCounter=30
+                    let secInterval=setInterval(()=>{
+                        if(!document.hidden){
+                            seconds.innerHTML=`0:${secCounter}`
+                            if(--secCounter===-1)
+                                clearInterval(secInterval)
+                        }
+                    },1000)
+                }
 
                 function frame1() {
                     if (width >= 15) {//start speaking done, now 30s start
@@ -57,6 +70,7 @@ export default function Listen() {
                             data.style.visibility='hidden'
                             progress.style.display='block'
                             seconds.style.display='block'
+                            startSecInterval()
                             width=1
                             id=setInterval(frame2,300)
                     } else {
@@ -71,6 +85,7 @@ export default function Listen() {
                         data.style.visibility='hidden'
                         progress.style.display='block'
                         seconds.style.display='block'
+                        startSecInterval()
                         width=1
                         id=setInterval(frame2,300)
                     } else {
@@ -85,6 +100,7 @@ export default function Listen() {
                         data.style.visibility='hidden'
                         progress.style.display='block'
                         seconds.style.display='block'
+                        startSecInterval()
                         width=1
                         id=setInterval(frame2,300)
                     } else {
@@ -99,6 +115,7 @@ export default function Listen() {
                         data.style.visibility='hidden'
                         progress.style.display='block'
                         seconds.style.display='block'
+                        startSecInterval()
                         width=1
                         id=setInterval(frame2,300)
                     } else {
@@ -127,7 +144,7 @@ export default function Listen() {
                                 id=setInterval(frame3Tablet,350)
                             else if(window.screen.availWidth<=576)
                                 id=setInterval(frame3Mobile,350)
-                        },2000)
+                        },2000)                        
                     } else {
                         width++;
                         progress.style.width = width + "%"
@@ -136,10 +153,12 @@ export default function Listen() {
 
                 function frame3(){
                     if (width >= 15) {//start speaking done, now 30s start
-                        clearInterval(id);
+                        clearInterval(id);                 
                         analysingText.innerHTML='Analysed'
                         analysedImg.style.display='block'
+                        feedbackDiv.classList.add('w3-animate-bottom')
                         setEndProgress(true)
+                        progressDiv.style.marginTop='100px'
                     } else {
                         width=width+0.10;
                         analyse.style.transform = `scaleX(${width})`
@@ -152,6 +171,7 @@ export default function Listen() {
                         analysingText.innerHTML='Analysed'
                         analysedImg.style.display='block'
                         setEndProgress(true)
+                        progressDiv.style.marginTop='100px'
                     } else {
                         width=width+0.10;
                         analyse.style.transform = `scaleX(${width})`
@@ -164,6 +184,7 @@ export default function Listen() {
                         analysingText.innerHTML='Analysed'
                         analysedImg.style.display='block'
                         setEndProgress(true)
+                        progressDiv.style.marginTop='100px'
                     } else {
                         width=width+0.10;
                         analyse.style.transform = `scaleX(${width})`
@@ -176,6 +197,7 @@ export default function Listen() {
                         analysingText.innerHTML='Analysed'
                         analysedImg.style.display='block'
                         setEndProgress(true)
+                        progressDiv.style.marginTop='100px'
                     } else {
                         width=width+0.10;
                         analyse.style.transform = `scaleX(${width})`
@@ -191,9 +213,9 @@ export default function Listen() {
     }
 
    const tryAgain=()=>{ 
-       setStartProgress(true)
+       setListen(true)
+       setStartProgress(false)
        setEndProgress(false)
-       progressAnimate()
    }
 
     useEffect(()=>{//use effect is used becuase it is called only after component is fully mounted .. so to query DOM elements we need useEffect
@@ -202,7 +224,7 @@ export default function Listen() {
         progressAnimate()
     },[startProgress])
 
-    return <Box className={classes.container}>
+    return <Box className={`${classes.container} w3-animate-bottom`}>
       {!endProgress && <Box className={classes.exclamationDiv}>
                 <img src={exclamation} alt='Note' style={{marginRight:'1em'}}/>
                 <Typography className={classes.exclamationText}>Speak aloud in English after pressing the listen button. The listening button will listen to your audio for 30 secs and provide you the feedback</Typography>
@@ -210,10 +232,10 @@ export default function Listen() {
       <Box className={classes.section1}>
           {listen && <img className={classes.listenBtn} src={ListenButton} onClick={handleProgress} alt='Listen'/>}
          
-          {startProgress && <div className={classes.progress}>
+          {startProgress && <div className={`${classes.progress} progress`}>
               <span className={`${classes.startSpeaking} startSpeaking`}>Start speaking in 5</span>
               <span className={`${classes.analysingText} analysingText`}>Analysing</span>
-              <span className={`${classes.seconds} seconds`}>0:30</span> 
+              <span className={`${classes.seconds} seconds`}></span> 
               <img src={analysed} alt='Done' className={`${classes.analysedImg} analysedImg`}/>
               <div className={`${classes.startProgress} startProgress`}></div>
               <div className={`${classes.progressFill} progressFill`}></div>
@@ -221,7 +243,7 @@ export default function Listen() {
 
           </div>}
       </Box>
-      <Box className={classes.section2}>
+      <Box className={`${classes.section2} feedbackDiv`}>
           {!endProgress && <Typography className={classes.demoText}>You can also read the following paragraph or talk about anything</Typography>}
           {endProgress && <Typography className={classes.feedbackTitle}>Speaking Feedback</Typography>}
           {endProgress && <Box className={classes.flexbox}>
